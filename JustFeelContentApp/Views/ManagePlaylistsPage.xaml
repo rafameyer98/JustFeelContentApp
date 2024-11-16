@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="JustFeelContentApp.Views.ManagePlaylistsPage"
+             xmlns:vm="clr-namespace:JustFeelContentApp.ViewModels">
+
+    <ContentPage.BindingContext>
+        <vm:PlaylistViewModel />
+    </ContentPage.BindingContext>
+
+    <StackLayout Padding="10">
+        <Label Text="Gerenciar Playlists"
+               FontSize="24"
+               HorizontalOptions="Center" />
+
+        <Button Text="Criar Nova Playlist"
+                Clicked="OnCreatePlaylistClicked" />
+
+        <ListView ItemsSource="{Binding Playlists}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Name}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

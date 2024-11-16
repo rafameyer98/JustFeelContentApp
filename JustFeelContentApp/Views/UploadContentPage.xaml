@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="JustFeelContentApp.Views.UploadContentPage">
+
+    <StackLayout Padding="20" Spacing="10">
+        <!-- Título -->
+        <Label Text="Upload de Conteúdo"
+               FontSize="24"
+               HorizontalOptions="Center" />
+
+        <!-- Botão para escolher o arquivo -->
+        <Button x:Name="SelectFileButton"
+                Text="Escolher Arquivo" 
+                Clicked="OnSelectFileClicked" />
+
+        <!-- Label para mostrar o status -->
+        <Label x:Name="StatusLabel" 
+               Text="Nenhum arquivo selecionado."
+               HorizontalOptions="Center" />
+
+        <!-- Botão para realizar o upload -->
+        <Button x:Name="UploadButton"
+                Text="Fazer Upload"
+                Clicked="OnUploadButtonClicked" 
+                IsEnabled="False"/>
+    </StackLayout>
+</ContentPage>
